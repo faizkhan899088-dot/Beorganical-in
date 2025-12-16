@@ -1,1 +1,738 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BE ORGANICAL | Premium Adam Shilajit | Dubai Premium Quality</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #0a0f2b 0%, #1a1f4b 100%);
+            color: #fff;
+            overflow-x: hidden;
+            min-height: 100vh;
+            position: relative;
+        }
+        /* Animated background particles */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.3;
+        }
+        .particle {
+            position: absolute;
+            background-color: rgba(246, 185, 59, 0.6);
+            border-radius: 50%;
+            animation: float 15s infinite linear;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            100% { transform: translateY(-1000px) rotate(720deg); }
+        }
+        /* Header with glow effect */
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(10, 15, 43, 0.95);
+            border-bottom: 4px solid #f6b93b;
+            box-shadow: 0 10px 30px rgba(246, 185, 59, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(246, 185, 59, 0.15) 0%, transparent 70%);
+            z-index: 0;
+        }
+        .header h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #f6b93b, #ff8a00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+            position: relative;
+            z-index: 1;
+            letter-spacing: 2px;
+        }
+        .tagline {
+            font-size: 2rem;
+            color: #4cd137;
+            font-weight: 800;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        .launch-badge {
+            background: linear-gradient(45deg, #e84118, #c23616);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 30px;
+            font-size: 1.4rem;
+            display: inline-block;
+            margin-top: 20px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            box-shadow: 0 8px 25px rgba(232, 65, 24, 0.5);
+            position: relative;
+            z-index: 1;
+            animation: badge-pulse 1.5s infinite;
+            border: 2px solid #ffdd59;
+        }
+        @keyframes badge-pulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 8px 25px rgba(232, 65, 24, 0.5); }
+            50% { transform: scale(1.08); box-shadow: 0 12px 35px rgba(232, 65, 24, 0.7); }
+        }
+        /* Image Gallery - TOP SECTION */
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 50px 20px;
+            background: rgba(0, 0, 0, 0.4);
+            flex-wrap: wrap;
+        }
+        .gallery-item {
+            text-align: center;
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+        }
+        .gallery-item img {
+            width: 100%;
+            border-radius: 20px;
+            border: 5px solid #f6b93b;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+            transition: all 0.4s;
+        }
+        .gallery-item img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 45px rgba(246, 185, 59, 0.5);
+            border-color: #4cd137;
+        }
+        .image-label {
+            margin-top: 15px;
+            font-size: 1.3rem;
+            color: #ffdd59;
+            font-weight: bold;
+        }
+        /* Main container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* Hero section */
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+            gap: 60px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 25px;
+            margin-top: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(246, 185, 59, 0.2);
+        }
+        .product-info {
+            flex: 1;
+            min-width: 350px;
+            padding: 30px;
+        }
+        .product-title {
+            font-size: 3.5rem;
+            background: linear-gradient(to right, #f6b93b, #ffdd59);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 25px;
+            line-height: 1.2;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        .product-description {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            color: #e0e0ff;
+            line-height: 1.7;
+        }
+        .features {
+            list-style: none;
+            margin: 35px 0;
+        }
+        .features li {
+            padding: 18px 0;
+            font-size: 1.4rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            display: flex;
+            align-items: center;
+            transition: all 0.3s;
+        }
+        .features li:hover {
+            background: rgba(255, 255, 255, 0.05);
+            padding-left: 15px;
+            border-radius: 10px;
+        }
+        .features li:before {
+            content: "✓";
+            color: #4cd137;
+            font-weight: bold;
+            margin-right: 20px;
+            font-size: 1.8rem;
+            background: rgba(76, 209, 55, 0.15);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 45px;
+        }
+        /* PRICE BOX - FIXED DISPLAY FOR AED 900 PROPERLY */
+        .price-box {
+            background: linear-gradient(135deg, #000428, #004e92);
+            padding: 30px;
+            border-radius: 20px;
+            margin-top: 40px;
+            border: 3px solid #f6b93b;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+        .price-box::before {
+            content: 'DUBAI PREMIUM';
+            position: absolute;
+            top: 15px;
+            right: -40px;
+            background: linear-gradient(45deg, #e84118, #ff3838);
+            color: white;
+            padding: 8px 50px;
+            transform: rotate(45deg);
+            font-size: 1.2rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            box-shadow: 0 5px 15px rgba(232, 65, 24, 0.5);
+        }
+        .price-label {
+            font-size: 1.8rem;
+            color: #ffdd59;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        .new-price {
+            color: #4cd137;
+            font-size: 5.5rem;
+            font-weight: 900;
+            margin: 20px 0;
+            display: block;
+            text-shadow: 0 5px 15px rgba(76, 209, 55, 0.4);
+            letter-spacing: 3px;
+        }
+        .currency {
+            font-size: 2.5rem;
+            vertical-align: super;
+            margin-right: 10px;
+        }
+        .old-price {
+            color: #aaa;
+            text-decoration: line-through;
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .discount {
+            background: linear-gradient(45deg, #e84118, #ff3838);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 15px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 15px;
+            font-size: 1.4rem;
+            box-shadow: 0 8px 20px rgba(232, 65, 24, 0.5);
+            border: 2px solid #ffdd59;
+        }
+        .offer-note {
+            margin-top: 20px;
+            color: #f6b93b;
+            font-style: italic;
+            font-size: 1.3rem;
+        }
+        /* WhatsApp Section */
+        .whatsapp-section {
+            background: linear-gradient(135deg, #25D366, #128C7E, #075E54);
+            padding: 60px 40px;
+            border-radius: 25px;
+            text-align: center;
+            margin: 80px auto;
+            max-width: 950px;
+            box-shadow: 0 30px 60px rgba(37, 211, 102, 0.4);
+            border: 4px solid white;
+            position: relative;
+            overflow: hidden;
+        }
+        .whatsapp-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+            z-index: 0;
+        }
+        .whatsapp-title {
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 1;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+        }
+        .whatsapp-subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 35px;
+            position: relative;
+            z-index: 1;
+            color: rgba(255, 255, 255, 0.95);
+        }
+        .whatsapp-button {
+            background: white;
+            color: #075E54;
+            padding: 25px 50px;
+            font-size: 2.5rem;
+            font-weight: 900;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 25px 0;
+            text-decoration: none;
+            border: 4px solid #075E54;
+            transition: all 0.3s;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            letter-spacing: 1px;
+        }
+        .whatsapp-button:hover {
+            background: #075E54;
+            color: white;
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 30px 50px rgba(0, 0, 0, 0.5);
+        }
+        .whatsapp-button i {
+            margin-right: 20px;
+        }
+        .order-instruction {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 25px;
+            border-radius: 20px;
+            margin-top: 35px;
+            font-size: 1.6rem;
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            border: 2px dashed white;
+        }
+        .order-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+            position: relative;
+            z-index: 1;
+        }
+        .step {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 30px;
+            border-radius: 20px;
+            flex: 1;
+            min-width: 250px;
+            border: 3px solid rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            transition: all 0.4s;
+        }
+        .step:hover {
+            transform: translateY(-15px) scale(1.05);
+            background: rgba(255, 255, 255, 0.25);
+            border-color: #f6b93b;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        .step-number {
+            background: linear-gradient(135deg, #f6b93b, #ff8a00);
+            color: #000;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 20px rgba(246, 185, 59, 0.5);
+        }
+        .step h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #f6b93b;
+        }
+        .step p {
+            font-size: 1.3rem;
+            color: #e0e0ff;
+        }
+        /* Testimonials */
+        .testimonials-section {
+            padding: 80px 20px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 25px;
+            margin-top: 60px;
+            border: 1px solid rgba(246, 185, 59, 0.1);
+        }
+        .section-title {
+            font-size: 3.5rem;
+            margin-bottom: 60px;
+            background: linear-gradient(to right, #f6b93b, #ffdd59);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        .testimonials-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+        }
+        .testimonial {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 40px;
+            border-radius: 25px;
+            max-width: 550px;
+            border-left: 6px solid #f6b93b;
+            text-align: left;
+            backdrop-filter: blur(10px);
+            transition: all 0.4s;
+        }
+        .testimonial:hover {
+            transform: translateY(-15px);
+            background: rgba(255, 255, 255, 0.12);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+        .testimonial-text {
+            font-size: 1.5rem;
+            font-style: italic;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+        .customer {
+            display: flex;
+            align-items: center;
+        }
+        .customer-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f6b93b, #ff8a00);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-right: 20px;
+            box-shadow: 0 8px 20px rgba(246, 185, 59, 0.5);
+        }
+        .customer-name {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #f6b93b;
+        }
+        .customer-location {
+            color: #aaa;
+            font-size: 1.2rem;
+        }
+        /* Bottom Image Section */
+        .bottom-image-section {
+            text-align: center;
+            padding: 70px 20px;
+        }
+        .bottom-image {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .bottom-image img {
+            width: 100%;
+            border-radius: 25px;
+            border: 6px solid #4cd137;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+            transition: all 0.5s;
+        }
+        .bottom-image img:hover {
+            transform: scale(1.03);
+            border-color: #f6b93b;
+            box-shadow: 0 35px 60px rgba(246, 185, 59, 0.4);
+        }
+        .image-caption {
+            margin-top: 25px;
+            font-size: 1.8rem;
+            color: #ffdd59;
+            font-weight: bold;
+        }
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 50px 20px;
+            background: rgba(0, 0, 0, 0.95);
+            margin-top: 80px;
+            border-top: 5px solid #f6b93b;
+        }
+        .footer-logo {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 25px;
+            background: linear-gradient(to right, #f6b93b, #ffdd59);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 3px;
+        }
+        .contact-info {
+            font-size: 1.5rem;
+            margin: 20px 0;
+            color: #aaa;
+        }
+        .contact-info i {
+            color: #f6b93b;
+            margin-right: 15px;
+            width: 30px;
+        }
+        .copyright {
+            margin-top: 35px;
+            color: #777;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 { font-size: 2.8rem; }
+            .tagline { font-size: 1.6rem; }
+            .product-title { font-size: 2.8rem; }
+            .whatsapp-title { font-size: 2.5rem; }
+            .whatsapp-button { font-size: 1.8rem; padding: 20px 35px; }
+            .new-price { font-size: 4rem; }
+            .section-title { font-size: 2.8rem; }
+            .launch-badge { font-size: 1.2rem; padding: 12px 25px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background Particles -->
+    <div class="particles" id="particles-container"></div>
+    <!-- Header -->
+    <div class="header">
+        <h1>BE ORGANICAL</h1>
+        <p class="tagline">DUBAI'S PREMIUM ADAM SHILAJIT | FREE DELIVERY IN UAE 🇦🇪</p>
+        <div class="launch-badge">
+            <i class="fas fa-crown"></i> DUBAI PREMIUM QUALITY <i class="fas fa-crown"></i>
+        </div>
+    </div>
+    <!-- TOP Image Gallery -->
+    <div class="image-gallery">
+        <div class="gallery-item">
+            <img src="https://m.media-amazon.com/images/I/61U3HEv96IL._AC_UF1000,1000_QL80_.jpg" alt="Premium Pure Himalayan Shilajit Resin in Jar">
+            <div class="image-label">100% Pure Himalayan Shilajit Resin - Gold Grade | راتنج نقي ١٠٠٪</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://m.media-amazon.com/images/I/615dvCNTO6L._AC_UF1000,1000_QL80_.jpg" alt="Luxury Glass Jar Packaging">
+            <div class="image-label">Premium Dubai-Grade Glass Jar Packaging | عبوة زجاجية فاخرة</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://m.media-amazon.com/images/I/71cbVFEzOsL._AC_UF1000,1000_QL80_.jpg" alt="Close-up Authentic Shilajit Texture">
+            <div class="image-label">Authentic Black-Gold Resin Texture - Lab Certified | نسيج أصلي معتمد</div>
+        </div>
+    </div>
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="product-info">
+                <h2 class="product-title">PREMIUM ADAM SHILAJIT | شيلاجيت آدم ممتاز</h2>
+                <p class="product-description">
+                    Dubai's exclusive high-potency Adam Shilajit. Purest Himalayan sourcing, 7-stage purification, lab-certified for superior quality. Trusted by UAE wellness enthusiasts for unmatched vitality.
+                    <br><br>
+                    <em>شيلاجيت آدم دبي الحصري عالي الفعالية. مصدر هيمالايا أنقى، تنقية بسبع مراحل، معتمد معملياً لجودة فائقة.</em>
+                </p>
+               
+                <ul class="features">
+                    <li>100% Pure Gold Grade Himalayan Resin | راتنج هيمالايا درجة ذهبية</li>
+                    <li>Advanced 7-Stage Purification Process | تنقية متطورة بسبع مراحل</li>
+                    <li>Lab Tested for Purity & Potency | معتمد معملياً للنقاء والفعالية</li>
+                    <li>No Fillers or Additives | بدون حشو أو إضافات</li>
+                    <li>Rich in Fulvic Acid & Minerals | غني بحمض الفولفيك والمعادن</li>
+                    <li>Boosts Energy, Stamina & Wellness | يعزز الطاقة والقدرة على التحمل</li>
+                    <li>Exclusive Dubai Premium Standard | معيار دبي الممتاز الحصري</li>
+                    <li>Free Delivery Across UAE | توصيل مجاني في الإمارات</li>
+                    <li>Cash on Delivery Available | الدفع عند الاستلام متاح</li>
+                </ul>
+               
+                <!-- PRICE BOX - FIXED DISPLAY FOR AED 900 PROPERLY -->
+                <div class="price-box">
+                    <div class="price-label">EXCLUSIVE DUBAI PREMIUM PRICE | سعر ممتاز</div>
+                    <div class="old-price">AED 1,200 | ١٢٠٠ درهم</div>
+                    <div class="new-price"><span class="currency">AED</span>900 <span style="font-size: 2rem; margin-left: 10px;">| ٩٠٠ درهم</span></div>
+                    <div class="discount">LIMITED OFFER - 25% OFF + FREE DELIVERY | عرض محدود</div>
+                    <div class="offer-note">
+                        <i class="fas fa-gift"></i> Premium quality | Fast free delivery all over UAE | جودة ممتازة
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- WhatsApp Order Section -->
+        <section class="whatsapp-section">
+            <h2 class="whatsapp-title"><i class="fab fa-whatsapp"></i> ORDER NOW VIA WHATSAPP | اطلب عبر واتساب</h2>
+            <p class="whatsapp-subtitle">Stock limited at this price! Free delivery in 24-48 hours across UAE.<br>المخزون محدود! توصيل مجاني خلال ٢٤-٤٨ ساعة.</p>
+           
+            <a href="https://wa.me/971582582650?text=Hi%2C%20I%20want%20to%20order%20Premium%20Adam%20Shilajit%20at%20AED%20900"
+               class="whatsapp-button"
+               target="_blank">
+               <i class="fab fa-whatsapp"></i> ORDER NOW: +971 582 582 650
+            </a>
+           
+            <div class="order-instruction">
+                <p><strong>OR send "PREMIUM SHILAJIT 900" to +971 582 582 650</strong></p>
+                <p><strong>أو أرسل "شيلاجيت ممتاز ٩٠٠" إلى ٩٧١ ٥٨٢ ٥٨٢ ٦٥٠</strong></p>
+            </div>
+           
+            <div class="order-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>WhatsApp Us | راسلنا</h3>
+                    <p>Click or send message | انقر أو أرسل رسالة</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Confirm Details | أكد التفاصيل</h3>
+                    <p>Share UAE address | شارك عنوان الإمارات</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Fast Delivery | توصيل سريع</h3>
+                    <p>Free + COD in 24-48 hrs | مجاني + دفع عند الاستلام</p>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials -->
+        <section class="testimonials-section">
+            <h2 class="section-title">UAE CUSTOMER REVIEWS | آراء العملاء</h2>
+           
+            <div class="testimonials-container">
+                <div class="testimonial">
+                    <p class="testimonial-text">
+                        "Premium quality Shilajit! Noticeable energy boost. Best in Dubai market."
+                        <br><br>
+                        <em>"شيلاجيت بجودة ممتازة! زيادة ملحوظة في الطاقة. الأفضل في سوق دبي."</em>
+                    </p>
+                    <div class="customer">
+                        <div class="customer-avatar">A</div>
+                        <div>
+                            <div class="customer-name">Ahmed R. | أحمد ر.</div>
+                            <div class="customer-location">Dubai | دبي</div>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="testimonial">
+                    <p class="testimonial-text">
+                        "Authentic and potent. Fast delivery to Abu Dhabi. Highly recommended!"
+                        <br><br>
+                        <em>"أصلي وفعال. توصيل سريع إلى أبوظبي. موصى به بشدة!"</em>
+                    </p>
+                    <div class="customer">
+                        <div class="customer-avatar">K</div>
+                        <div>
+                            <div class="customer-name">Khalid M. | خالد م.</div>
+                            <div class="customer-location">Abu Dhabi | أبوظبي</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- BOTTOM Image Section -->
+        <div class="bottom-image-section">
+            <div class="bottom-image">
+                <img src="https://m.media-amazon.com/images/I/61-M4u131QL._AC_UF1000,1000_QL80_.jpg" alt="Premium Gold Grade Shilajit">
+                <div class="image-caption">Exclusive Gold Grade Himalayan Adam Shilajit - Dubai Premium | شيلاجيت آدم درجة ذهبية</div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-logo">BE ORGANICAL DUBAI</div>
+        <p class="contact-info"><i class="fas fa-phone"></i> +971 582 582 650 (WhatsApp) | واتساب</p>
+        <p class="contact-info"><i class="fas fa-envelope"></i> dubai@beorganical.com</p>
+        <p class="contact-info"><i class="fas fa-map-marker-alt"></i> Free Delivery Across UAE | توصيل مجاني في الإمارات</p>
+        <p class="copyright">
+            © 2025 Be Organical Dubai. All rights reserved.<br>
+            Dietary supplement. Consult professional before use.<br>
+            مكمل غذائي. استشر متخصصاً قبل الاستخدام.
+        </p>
+    </div>
+    <script>
+        // Particles animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.getElementById('particles-container');
+            const particleCount = 60;
+           
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+               
+                const size = Math.random() * 12 + 5;
+                const posX = Math.random() * 100;
+                const delay = Math.random() * 20;
+                const duration = Math.random() * 25 + 15;
+               
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${posX}%`;
+                particle.style.animationDelay = `${delay}s`;
+                particle.style.animationDuration = `${duration}s`;
+                particle.style.opacity = Math.random() * 0.6 + 0.2;
+               
+                container.appendChild(particle);
+            }
+           
+            // UAE Flag
+            const header = document.querySelector('.header');
+            const uaeFlag = document.createElement('div');
+            uaeFlag.innerHTML = '🇦🇪 DUBAI PREMIUM 🇦🇪';
+            uaeFlag.style.position = 'absolute';
+            uaeFlag.style.bottom = '10px';
+            uaeFlag.style.right = '20px';
+            uaeFlag.style.background = 'rgba(255,255,255,0.1)';
+            uaeFlag.style.padding = '8px 15px';
+            uaeFlag.style.borderRadius = '20px';
+            uaeFlag.style.fontSize = '1.2rem';
+            uaeFlag.style.fontWeight = 'bold';
+            uaeFlag.style.backdropFilter = 'blur(5px)';
+            header.appendChild(uaeFlag);
+        });
+    </script>
+</body>
+  </html>
