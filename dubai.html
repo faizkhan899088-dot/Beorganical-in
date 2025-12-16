@@ -217,7 +217,7 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
         }
         .price-box::before {
-            content: 'LIMITED OFFER';
+            content: 'DUBAI PREMIUM';
             position: absolute;
             top: 15px;
             right: -40px;
@@ -268,6 +268,13 @@
             font-size: 1.4rem;
             box-shadow: 0 8px 20px rgba(232, 65, 24, 0.5);
             border: 2px solid #ffdd59;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .discount:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(232, 65, 24, 0.7);
         }
         .offer-note {
             margin-top: 20px;
@@ -548,7 +555,7 @@
     <!-- Header -->
     <div class="header">
         <h1>BE ORGANICAL</h1>
-        <p class="tagline">DUBAI'S PREMIUM ADAM SHILAJIT | FREE DELIVERY IN UAE</p>
+        <p class="tagline">DUBAI'S PREMIUM ADAM SHILAJIT | FREE DELIVERY IN UAE 🇦🇪</p>
         <div class="launch-badge">
             <i class="fas fa-crown"></i> DUBAI PREMIUM QUALITY <i class="fas fa-crown"></i>
         </div>
@@ -596,7 +603,12 @@
                     <div class="price-label">EXCLUSIVE DUBAI PREMIUM PRICE | سعر ممتاز</div>
                     <div class="old-price">AED 1,200 | ١٢٠٠ درهم</div>
                     <div class="new-price"><span class="currency">AED</span>900 <span style="font-size: 2rem; margin-left: 10px;">| ٩٠٠ درهم</span></div>
-                    <div class="discount">LIMITED OFFER - 25% OFF + FREE DELIVERY | عرض محدود</div>
+                    <!-- ORANGE DISCOUNT BUTTON WITH WHATSAPP LINK -->
+                    <a href="https://wa.me/971582582650?text=Hi%2C%20I%20want%20to%20order%20Premium%20Adam%20Shilajit%20at%20AED%20900"
+                       class="discount"
+                       target="_blank">
+                       LIMITED OFFER - 25% OFF + FREE DELIVERY | عرض محدود
+                    </a>
                     <div class="offer-note">
                         <i class="fas fa-gift"></i> Premium quality | Fast free delivery all over UAE | جودة ممتازة
                     </div>
@@ -612,6 +624,14 @@
                class="whatsapp-button"
                target="_blank">
                <i class="fab fa-whatsapp"></i> ORDER NOW: +971 582 582 650
+            </a>
+           
+            <!-- ORANGE DISCOUNT BUTTON IN WHATSAPP SECTION -->
+            <a href="https://wa.me/971582582650?text=Hi%2C%20I%20want%20to%20order%20Premium%20Adam%20Shilajit%20at%20AED%20900"
+               class="discount"
+               target="_blank"
+               style="display: inline-block; margin-top: 20px;">
+               LIMITED OFFER - 25% OFF + FREE DELIVERY | عرض محدود
             </a>
            
             <div class="order-instruction">
@@ -717,6 +737,21 @@
                
                 container.appendChild(particle);
             }
+           
+            // UAE Flag
+            const header = document.querySelector('.header');
+            const uaeFlag = document.createElement('div');
+           
+            uaeFlag.style.position = 'absolute';
+            uaeFlag.style.bottom = '10px';
+            uaeFlag.style.right = '20px';
+            uaeFlag.style.background = 'rgba(255,255,255,0.1)';
+            uaeFlag.style.padding = '8px 15px';
+            uaeFlag.style.borderRadius = '20px';
+            uaeFlag.style.fontSize = '1.2rem';
+            uaeFlag.style.fontWeight = 'bold';
+            uaeFlag.style.backdropFilter = 'blur(5px)';
+            header.appendChild(uaeFlag);
         });
     </script>
 </body>
