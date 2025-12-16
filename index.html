@@ -285,8 +285,9 @@
             vertical-align: super;
         }
 
+        /* DISCOUNT BUTTON STYLES - MADE CLICKABLE */
         .discount {
-            background: linear-gradient(45deg, #e84118, #ff3838);
+            background: linear-gradient(45deg, #ff8800, #ff5500);
             color: white;
             padding: 12px 25px;
             border-radius: 15px;
@@ -294,8 +295,21 @@
             display: inline-block;
             margin-top: 15px;
             font-size: 1.4rem;
-            box-shadow: 0 8px 20px rgba(232, 65, 24, 0.5);
+            box-shadow: 0 8px 20px rgba(255, 136, 0, 0.5);
             border: 2px solid #ffdd59;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .discount:hover {
+            background: linear-gradient(45deg, #ff5500, #ff3300);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 25px rgba(255, 136, 0, 0.7);
+        }
+
+        .discount:active {
+            transform: translateY(-1px) scale(1.02);
         }
 
         .offer-note {
@@ -659,7 +673,11 @@
                     <div class="price-label">EXCLUSIVE LAUNCH OFFER</div>
                     <div class="old-price">₹15,000</div>
                     <div class="new-price">₹2,<span>000</span></div>
-                    <div class="discount">SAVE 85% + FREE DELIVERY</div>
+                    <a href="https://wa.me/919289463545?text=Hi%2C%20I%20want%20to%20order%20Adam%20Shilajit%20at%20₹2000%20offer" 
+                       class="discount" 
+                       target="_blank">
+                       SAVE 85% + FREE DELIVERY
+                    </a>
                     <div class="offer-note">
                         <i class="fas fa-gift"></i> Limited stock at this price | Offer ends soon!
                     </div>
@@ -773,13 +791,13 @@
                 const delay = Math.random() * 20;
                 const duration = Math.random() * 25 + 15;
                 
-                particle.style.width = ${size}px;
-                particle.style.height = ${size}px;
-                particle.style.left = ${posX}%;
-                particle.style.animationDelay = ${delay}s;
-                particle.style.animationDuration = ${duration}s;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${posX}%`;
+                particle.style.animationDelay = `${delay}s`;
+                particle.style.animationDuration = `${duration}s`;
                 particle.style.opacity = Math.random() * 0.6 + 0.2;
-                particle.style.background = rgba(${Math.random() * 55 + 200}, ${Math.random() * 100 + 155}, 59, 0.6);
+                particle.style.background = `rgba(${Math.random() * 55 + 200}, ${Math.random() * 100 + 155}, 59, 0.6)`;
                 
                 container.appendChild(particle);
             }
@@ -791,7 +809,7 @@
             
             setInterval(() => {
                 priceBox.style.borderColor = colors[colorIndex];
-                priceBox.style.boxShadow = 0 20px 40px ${colors[colorIndex]}40;
+                priceBox.style.boxShadow = `0 20px 40px ${colors[colorIndex]}40`;
                 colorIndex = (colorIndex + 1) % colors.length;
             }, 2000);
             
@@ -842,6 +860,15 @@
                 ];
                 badge.style.background = colors[Math.floor(Math.random() * colors.length)];
             }, 4000);
+            
+            // Add click animation to discount button
+            const discountBtn = document.querySelector('.discount');
+            discountBtn.addEventListener('click', function() {
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 200);
+            });
         });
     </script>
 </body>
