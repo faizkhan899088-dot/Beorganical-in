@@ -217,6 +217,7 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
         }
         .price-box::before {
+            content: 'LIMITED OFFER';
             position: absolute;
             top: 15px;
             right: -40px;
@@ -547,7 +548,7 @@
     <!-- Header -->
     <div class="header">
         <h1>BE ORGANICAL</h1>
-        <p class="tagline">DUBAI'S PREMIUM ADAM SHILAJIT | FREE DELIVERY IN UAE 🇦🇪</p>
+        <p class="tagline">DUBAI'S PREMIUM ADAM SHILAJIT | FREE DELIVERY IN UAE</p>
         <div class="launch-badge">
             <i class="fas fa-crown"></i> DUBAI PREMIUM QUALITY <i class="fas fa-crown"></i>
         </div>
@@ -716,22 +717,7 @@
                
                 container.appendChild(particle);
             }
-           
-            // UAE Flag
-            const header = document.querySelector('.header');
-            const uaeFlag = document.createElement('div');
-            uaeFlag.innerHTML = '🇦🇪 DUBAI PREMIUM 🇦🇪';
-            uaeFlag.style.position = 'absolute';
-            uaeFlag.style.bottom = '10px';
-            uaeFlag.style.right = '20px';
-            uaeFlag.style.background = 'rgba(255,255,255,0.1)';
-            uaeFlag.style.padding = '8px 15px';
-            uaeFlag.style.borderRadius = '20px';
-            uaeFlag.style.fontSize = '1.2rem';
-            uaeFlag.style.fontWeight = 'bold';
-            uaeFlag.style.backdropFilter = 'blur(5px)';
-            header.appendChild(uaeFlag);
         });
     </script>
 </body>
-  </html>
+</html>
